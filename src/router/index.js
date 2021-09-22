@@ -1,12 +1,7 @@
 import {createRouter,createWebHashHistory} from "vue-router";
-import HelloWorld from '../components/HelloWorld.vue';
-import Demo from '../components/demo1.vue'
-
-// const HelloWorld = () => import("../components/HelloWorld.vue")
 
 const routes = [
-    {path: "/", component: Demo},
-    {path: '/Hello', component: HelloWorld}
+    
   ]
   
   // 3. 创建路由实例并传递 `routes` 配置
