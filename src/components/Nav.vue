@@ -8,13 +8,11 @@
           class="max-w-full max-h-full"
         />
       </h1>
-      <p class="h-6 text-2xl font-semibold">二锅头blog</p>
+      <p class="hidden h-6 text-2xl font-semibold hidden md:block">二锅头blog</p>
     </div>
     <ul class="flex max-h-14">
-      <li v-for="(item, index) in TagsList" :key="index">
-        <a href="#" class="p-1 md:p-4 font-medium text-gray-900">{{
-          item.name
-        }}</a>
+      <li v-for="(item, index) in TagsList" :key="index" class="hidden md:block">
+        <router-link class="p-1 md:p-4 font-medium text-gray-900" :to="{path: '/Nav/'+ item.name}">{{item.name}}</router-link>
       </li>
       <button class="max-h14 mx-3">
         <svg
@@ -43,7 +41,7 @@ export default {
   setup() {
     const TagsList = reactive([
       { id: 1, name: "Blog" },
-      { id: 2, name: "Tags" },
+      { id: 2, name: "Tag" },
       { id: 3, name: "About" },
     ]);
     return {

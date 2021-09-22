@@ -1,7 +1,28 @@
 import {createRouter,createWebHashHistory} from "vue-router";
+import Blog from '../components/Blog.vue'
+import Tag from '../components/Tag.vue'
+import About from '../components/About.vue'
 
 const routes = [
-    
+    {
+      path: "/",
+      redirect: '/Nav/Blog'
+    },
+    {
+      path: '/Nav/Blog',
+      name: 'blog',
+      component: Blog
+    },
+    {
+      path:'/Nav/Tag',
+      name: 'tag',
+      component: Tag
+    },
+    {
+      path: '/Nav/About',
+      name: 'about',
+      component: About
+    }
   ]
   
   // 3. 创建路由实例并传递 `routes` 配置
