@@ -1,5 +1,6 @@
 <template>
   <div>
+      <Search :msg="msg" />
       <ul>
           <li class="grid grid-cols-1 lg:grid-cols-4 py-4 shadow-sm" v-for="(item, index) in BlogList" :key="index">
               <div class="text-base font-medium leading-6 text-gray-500 my-2">{{item.data.time}}</div>
@@ -15,13 +16,16 @@
 </template>
 
 <script>
-import {reactive} from'vue'
+import {reactive, ref} from'vue'
 import Page from './propscomponent/page.vue'
+import Search from '../components/propscomponent/Search.vue'
 export default {
     components: {
-        Page
+        Page,
+        Search
     },
     setup() {
+        let msg = ref('All Posts')
         const BlogList = reactive([
             {
                 data:{
@@ -59,6 +63,7 @@ export default {
         ])
         return{
             BlogList,
+            msg
         }
     }
 }

@@ -1,6 +1,6 @@
 <template>
   <div class="flex-col pt-6 pb-8 space-y-2 md:space-y-5 border-b-2">
-    <h1 class="text-3xl font-extrabold font-serif sm:text-5xl">All Posts</h1>
+    <Title :msg="msg" />
     <div class="relative max-w-lg">
       <input
         placeholder="Search..."
@@ -39,7 +39,12 @@
 
 <script>
 import { ref } from "vue";
+import Title from "./Title.vue"
 export default {
+  props:['msg'],
+  components:{
+    Title
+  },
   setup() {
     const message = ref("");
     
