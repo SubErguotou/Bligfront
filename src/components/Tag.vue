@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="border-t-2">
       <div class="grid grid-cols-1 sm:grid-cols-4 sm:place-content-center mt-8 md:mt-16">
-        <div class="sm:col-start-2 sm:col-end-2 pr-8 text-2xl font-extrabold font-serif md:text-4xl md:place-self-end">
+        <div class="sm:col-start-2 sm:col-end-2 pr-8 text-4xl font-extrabold font-serif md:text-4xl md:place-self-end">
           <div>
             Tags
           </div>
